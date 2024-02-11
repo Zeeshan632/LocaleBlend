@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "343074706179",
+    "project_id": "syott-chat",
+    "storage_bucket": "syott-chat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:343074706179:android:a45cb1079a01000df5cf36",
+        "android_client_info": {
+          "package_name": "com.sawuonthetrain"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "343074706179-825uqqashbs4e95oj6kuq4m14ufuruap.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWcY57_kzsCIG_G8JhU39TerYAyb56qPA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "343074706179-825uqqashbs4e95oj6kuq4m14ufuruap.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
