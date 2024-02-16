@@ -1,4 +1,4 @@
-package com.sawuonthetrain.newarchitecture;
+package com.localeblend.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.sawuonthetrain.BuildConfig;
-import com.sawuonthetrain.newarchitecture.components.MainComponentsRegistry;
-import com.sawuonthetrain.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.localeblend.BuildConfig;
+import com.localeblend.newarchitecture.components.MainComponentsRegistry;
+import com.localeblend.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 

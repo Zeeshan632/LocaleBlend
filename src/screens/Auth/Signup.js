@@ -20,6 +20,8 @@ import Input from '../../components/Input';
 import axios from 'axios';
 import endpoint from '../../utils/endpoint';
 import firestore from '@react-native-firebase/firestore';
+import auth from '@react-native-firebase/auth';
+import database from '@react-native-firebase/database';
 
 const Signup = ({navigation}) => {
   const [hidePassword, setHidePassword] = useState(true)
@@ -88,38 +90,29 @@ const Signup = ({navigation}) => {
         if(validatePassword(inputData.password)){
           if(inputData.password === retypePassword){
             setLoading(true)
-            axios(config)
-            .then(function (response) {              
-              
-              setLoading(false)
-              if(response.data.success){
-                firestore()
-                .collection('users')
-                .doc(`${response.data.user_id}`)
-                .set({
-                  name: `${inputData.firstName} ${inputData.lastName}`,
-                  profileImage: null,
-                  id: response.data.user_id,
+            auth().createUserWithEmailAndPassword(inputData.email, inputData.password).then(({user}) => {
+              const uid = user.uid
+              database().ref(`/users/${uid}`).set({
+                firstName: inputData.firstName,
+                lastName: inputData.lastName,
+                age: inputData.age,
+                email: inputData.email,
+                password: inputData.password
+              })
+              .then(() => {
+                setLoading(false)
+                navigation.navigate('Login')
+                Toast.show({
+                  type: 'success',
+                  text1: 'Account create successfully',
+                  text2: 'You can now login to your account 😊'
                 })
-                .then(() => {
-                  setLoading(false);
-                  navigation.navigate('Login');
-                })
-                .catch((err) => setLoading(false));
-
-              }else {
+              }).catch(err => {
+                setLoading(false)
                 Toast.show({
                   type: 'error',
-                  text1: 'Warning',
-                  text2: response.data.message
+                  text1: err.message
                 })
-              }
-            }).catch(function(error){
-              setLoading(false)
-              Toast.show({
-                type: 'error',
-                text1: 'Warning',
-                text2: error.message
               })
             })
           }else {

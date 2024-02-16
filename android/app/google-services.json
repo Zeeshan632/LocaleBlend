@@ -1,36 +1,26 @@
 {
   "project_info": {
-    "project_number": "343074706179",
-    "project_id": "syott-chat",
-    "storage_bucket": "syott-chat.appspot.com"
+    "project_number": "797618858284",
+    "project_id": "localeblend",
+    "storage_bucket": "localeblend.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:343074706179:android:a45cb1079a01000df5cf36",
+        "mobilesdk_app_id": "1:797618858284:android:9e7958e76a61f3ad5aa489",
         "android_client_info": {
-          "package_name": "com.sawuonthetrain"
+          "package_name": "com.localeblend"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "343074706179-825uqqashbs4e95oj6kuq4m14ufuruap.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBWcY57_kzsCIG_G8JhU39TerYAyb56qPA"
+          "current_key": "AIzaSyAi7Dq_XftQqt_Ju-8rM4FaiHfBWr3NShU"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "343074706179-825uqqashbs4e95oj6kuq4m14ufuruap.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }
